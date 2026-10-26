@@ -909,7 +909,8 @@ void VictronComponent::handle_value_() {
       }
       return;
     case fnv1a_hash("FWE"):
-      if (this->firmware_version_24bit_text_sensor_ == nullptr || this->firmware_version_24bit_text_sensor_->has_state())
+      if (this->firmware_version_24bit_text_sensor_ == nullptr ||
+          this->firmware_version_24bit_text_sensor_->has_state())
         return;
 
       if (value_.size() > 4) {
