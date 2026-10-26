@@ -101,7 +101,7 @@ void VictronComponent::loop() {
 
   last_transmission_ = now;
   size_t bytes_read = 0;
-  static constexpr size_t MAX_BYTES_PER_LOOP = 64;
+  static constexpr size_t MAX_BYTES_PER_LOOP = 128;
   while (available() && bytes_read < MAX_BYTES_PER_LOOP) {
     uint8_t c;
     read_byte(&c);
